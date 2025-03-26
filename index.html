@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>you're almost there</title>
+</head>
+
+<body>
+  <form id="passwordForm">
+    <label for="password">Well? Do you know it or not?:</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('passwordForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      const password = document.getElementById('password').value;
+      const correctPassword = "9/12/81"; // Replace with your actual password
+      if (password === correctPassword) {
+        window.location.href = "https://docs.google.com/document/d/1Tu3Y39W_9ugWbKagsEEqvfRKPjout9yfsah4I7oKa0Y/"; // Replace with your Google Doc URL
+      } else {
+        alert("you don't know. try again.");
+      }
+    });
+  </script>
+</body>
+
+</html>
